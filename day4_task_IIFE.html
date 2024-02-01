@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ //1.Print odd numbers in an array 
+        (function(a){
+            for(var i=0;i<a.length;i++)
+            {
+                if(a[i]%2!=0)
+                {
+                    console.log(a[i])
+                }
+            }
+        })([1,2,3,4,5,6,7,8,9])
+        
+
+
+    //2. Convert all the strings to title caps in a string array
+
+       (
+        function(a1){
+            for(var i=0;i<a1.length;i++)
+            {
+                for(var j=0;j<a1[i].length;j++){
+                    a1[i] = a1[i].charAt(0).toUpperCase() + a1[i].slice(1);
+                }
+            }
+            console.log(...a1) 
+        }
+        )(["guvi","geek","mamatha"])
+        
+
+
+//3.Sum of all numbers in an array
+        (function(a2){
+            var s=0;
+            for(var i=0; i<a2.length;i++)
+            {
+               s=s+a2[i]; 
+            }
+            console.log("sum of all elements in array:",s)
+         })([1,2,3,4,5])
+        
+    
+
+//4. Return all the prime numbers in an array
+    (
+        function(a3){
+            var prime = [];            
+            for(var i=0;i<a3.length;i++)
+            {
+                var count=0;
+                for(var j=2;j<a3[i];j++){
+                    if(a3[i]%j==0){
+                    count=count+1}
+                }
+                if(count==0)
+                {
+                    prime.push(a3[i])
+                }
+            }
+            console.log(...prime)
+        })([3,4,5,7,8,11,13,17,18,19])
+       
+//5.Return all the palindromes in an array
+   (
+        function(a4){
+            var palindrome = [];            
+            for(var j=0;j<a4.length;j++)
+            {
+                let sum=0;
+                let temp=a4[j]
+                let rem;
+                while(a4[j]>0){
+                   rem=a4[j]%10;
+                   sum=sum+rem;
+                   a4[j]=a4[j]/10;
+                }
+                if(sum==rem)
+                {
+                    palindrome.push(sum)
+                }
+            }
+           console.log(...palindrome)
+        })([121,232,454,667])
+        
+
+   </script>
+</body>
+</html>
