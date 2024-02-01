@@ -147,6 +147,31 @@
 	}
 })([1, 2, 3, 4, 5],[1, 2, 3, 4, 5].length,3)
 
+//Rotate an array K times
+(
+function(a)
+{
+	
+    for (let i = 0; i < a.length; i ++)  
+    {  
+        for ( j = i + 1; j < a.length; j++)  
+        {  
+            if ( a[i] == a[j])  
+            {  
+                 
+                for ( k = j; k < a.length - 1; k++)  
+                {  
+                    a[k] = a [k + 1];  
+                }  
+                 
+                a.length--;  
+                j--; 
+            }
+        }
+    }
+    console.log(...a)
+})([1, 2, 3, 4,0,1,1,1,1,2,4,5])
+
    </script>
 </body>
 </html>
