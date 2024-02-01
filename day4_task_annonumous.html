@@ -148,6 +148,27 @@ else
 console.log(`array are not same size`)
  
 
+//Rotate an array K times
+let rotate= function(a, n, k)
+{
+	k = k % n;
+
+	for (let i = 0; i < n; i++) {
+		if (i < k) {
+			console.log(a[n + i - k]);
+		}
+		else {
+
+			console.log(a[i - k]);
+		}
+	}
+}
+
+let Array = [1, 2, 3, 4, 5];
+let N = Array.length;
+let K = 3;
+
+rotate(Array, N, K);
 
 
     </script>
